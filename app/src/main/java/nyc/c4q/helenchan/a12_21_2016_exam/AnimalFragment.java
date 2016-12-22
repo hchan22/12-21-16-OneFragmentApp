@@ -52,6 +52,7 @@ public class AnimalFragment extends Fragment {
         fetchAnimals();
     }
 
+
     private void fetchAnimals(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://jsjrobotics.nyc/")
