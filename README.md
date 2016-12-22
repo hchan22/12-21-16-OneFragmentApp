@@ -2,4 +2,4 @@
 
 Helen Chan
 3311
-Struggling to get fragment root view to change background color =/
+Took too long to figure out how to get rootview of fragment didn't have time to do extra credit.
