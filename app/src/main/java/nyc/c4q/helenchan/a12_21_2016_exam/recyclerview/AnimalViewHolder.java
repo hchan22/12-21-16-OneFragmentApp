@@ -3,7 +3,6 @@ package nyc.c4q.helenchan.a12_21_2016_exam.recyclerview;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import nyc.c4q.helenchan.a12_21_2016_exam.R;
@@ -15,16 +14,20 @@ import nyc.c4q.helenchan.a12_21_2016_exam.models.Animal;
 public class AnimalViewHolder extends RecyclerView.ViewHolder {
     TextView name;
     int color;
-    LinearLayout layout;
     private int backgroundColor;
 
     public AnimalViewHolder(final View itemView) {
         super(itemView);
         name = (TextView) itemView.findViewById(R.id.name_textview);
-        layout = new LinearLayout(itemView.getContext());
-        layout = (LinearLayout) itemView.findViewById(android.R.id.content);
 
-     
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                itemView.getRootView().setBackgroundColor(backgroundColor);
+
+            }
+        });
 
     }
 
@@ -35,4 +38,6 @@ public class AnimalViewHolder extends RecyclerView.ViewHolder {
         name.setTextColor(color);
 
     }
+
 }
+
